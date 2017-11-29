@@ -45,36 +45,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = "D:\\github\\dev-songkran.github.io\\source\\pages\\index.js?entry";
 
 var Container = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-0"
+    componentId: "ywkydc-0"
 })(["max-width:1200px;width:1200px;margin:0 auto;padding:40px;min-height:500px;background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,0.1);position:relative;"]);
 var Img = _styledComponents2.default.img.withConfig({
-    componentId: "tqdna-1"
+    componentId: "ywkydc-1"
 })(["display:block;margin:0 auto;border-radius:100%;"]);
 var Myname = _styledComponents2.default.h3.withConfig({
-    componentId: "tqdna-2"
+    componentId: "ywkydc-2"
 })(["margin:10px auto;display:table;font-size:25px;font-weight:400;color:#333;"]);
 var Detail = _styledComponents2.default.p.withConfig({
-    componentId: "tqdna-3"
+    componentId: "ywkydc-3"
 })(["font-size:14px;color:#111;display:table;margin:0 auto;font-weight:400;margin-bottom:", "px;margin-top:", "px;a{color:#446594;font-weight:600;}"], function (props) {
     return props.mb ? props.mb : '5';
 }, function (props) {
     return props.mt ? props.mt : '0';
 });
 var Icon = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-4"
+    componentId: "ywkydc-4"
 })(["background-image:", ";background-size:100%;height:30px;width:30px;margin:0 auto;display:inline-block;"], function (props) {
     return props.svg ? "url(" + props.svg + ")" : "url('')";
 });
 var Box = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-5"
+    componentId: "ywkydc-5"
 })(["margin-top:30px;margin-bottom:30px;border-top:1px solid #f197a3;>h3{text-align:center;font-weight:500;}"]);
 var Timeline = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-6"
+    componentId: "ywkydc-6"
 })(["display:flex;position:relative;margin-bottom:15px;&:after,&:before{content:'';position:absolute;left:0;right:0;bottom:0;top:0;margin:auto;}&:after{width:30px;height:30px;display:flex;border-radius:100%;border:2px solid #f197a3;padding:10px;background:#fff;background-image:", ";background-repeat:no-repeat;background-position:center;}&:before{width:2px;background:#f197a3;bottom:auto;height:120%;}"], function (props) {
     return props.svg ? "url(" + props.svg + ")" : "url('')";
 });
 var Text = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-7"
+    componentId: "ywkydc-7"
 })(["width:50%;display:flex;margin-left:", ";margin-right:", ";h3{margin:0;font-weight:400;color:#333;width:100%;}", "{color:#f197a3;margin:0;width:100%;}"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
@@ -82,24 +82,24 @@ var Text = _styledComponents2.default.div.withConfig({
 }, Detail);
 
 var Year = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-8"
+    componentId: "ywkydc-8"
 })(["width:50%;margin-left:", ";margin-right:", ";display:flex;padding:0 15px;"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
     return props.right ? 'auto' : '30px';
 });
 var Card = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-9"
+    componentId: "ywkydc-9"
 })(["padding:15px;", ";", ";&.custom{padding:5px 15px;height:40px;border:2px solid #785892;border-radius:50px;position:relative;margin-top:auto;margin-bottom:auto;color:#785892;}@media (max-width:670px){h3{font-size:14px;}p{font-size:10px;}&.custom{font-size:13px;padding:5px 10px;height:35px;font-weight:400;}}"], function (props) {
     return props.left ? "margin-left: auto; margin-right:0;text-align:right;" : "";
 }, function (props) {
     return props.right ? "margin-right: auto; margin-left:0;text-align:left;" : "";
 });
 var Skill = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-10"
+    componentId: "ywkydc-10"
 })(["margin:15px;"]);
 var Flex = _styledComponents2.default.div.withConfig({
-    componentId: "tqdna-11"
+    componentId: "ywkydc-11"
 })(["display:flex;align-items:center;justify-content:center"]);
 
 var App = function (_Component) {
@@ -325,11 +325,11 @@ var App = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 210
                 }
-            }), _react2.default.createElement(_Chart2.default, { percent: "85", skillName: "javascript / jQuery", __source: {
+            }), _react2.default.createElement(_Chart2.default, { percent: "89", skillName: "PHP", __source: {
                     fileName: _jsxFileName,
                     lineNumber: 211
                 }
-            }), _react2.default.createElement(_Chart2.default, { percent: "89", skillName: "PHP", __source: {
+            }), _react2.default.createElement(_Chart2.default, { percent: "85", skillName: "mySQL", __source: {
                     fileName: _jsxFileName,
                     lineNumber: 212
                 }
@@ -338,7 +338,7 @@ var App = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 214
                 }
-            }, _react2.default.createElement(_Chart2.default, { percent: "85", skillName: "mySQL", __source: {
+            }, _react2.default.createElement(_Chart2.default, { percent: "85", skillName: "javascript / jQuery", __source: {
                     fileName: _jsxFileName,
                     lineNumber: 215
                 }

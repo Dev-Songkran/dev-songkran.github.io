@@ -208,11 +208,11 @@ class App extends Component {
                     <h3>SKILLS</h3>
                     <Flex style={{marginBottom:'30px'}}>
                         <Chart percent="96" skillName="HTML5 / CSS3"></Chart>
-                        <Chart percent="85" skillName="javascript / jQuery"></Chart>
                         <Chart percent="89" skillName="PHP"></Chart>
+                        <Chart percent="85" skillName="mySQL"></Chart>
                     </Flex>
                     <Flex>
-                        <Chart percent="85" skillName="mySQL"></Chart>
+                        <Chart percent="85" skillName="javascript / jQuery"></Chart>
                         <Chart percent="40" skillName="React.js / Next.js"></Chart>
                     </Flex>
                 </Box>

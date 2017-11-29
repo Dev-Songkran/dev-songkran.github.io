@@ -38,13 +38,20 @@ const Detail = styled.p`
         font-weight: 600;
     }
 `
-const Icon = styled.div`
-    background-image: ${props => props.svg ? `url(${props.svg})` : `url('')` };
-    background-size: 100%;
-    height: 30px;
-    width: 30px;
-    margin: 0 auto;
-    display: inline-block;
+const Icon = styled.i`
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid ${props => props.color ? props.color : '#fff'};
+    color: ${props => props.color ? props.color : '#fff'};
+    transition: all 0.2s;
+    margin: 0 5px;
+    &:hover{
+        background: ${props => props.color ? props.color : '#fff'};
+        color: #fff;
+    }
 `
 const Box = styled.div`
     margin-top: 30px;
@@ -154,17 +161,41 @@ const Flex = styled.div`
     align-items: center;
     justify-content: center
 `
+const Language = styled.div`
+    
+`
 class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {isToggleOn: true};
+      this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+      this.setState(prevState => ({
+        isToggleOn: !prevState.isToggleOn
+      }));
+    }
     render(){
         return (
             <Container>
+                <Language onClick={this.handleClick}>{this.state.isToggleOn ? 'EN' : 'TH'}</Language>
                 <Img width="200" height="200" src="../static/media/my.1bda1d7a.jpg"/>
                 <Myname>Songkran Wichitpong</Myname>
                 <Detail>I'm a front-end and back-end developer from Thailand</Detail>
                 <Detail><b>address</b> 263 , 14 Lane , Rattana Uthit Rd., Hatyai Sub-district, Hatyai District, Songkhla, 90110 ,Thailand.</Detail>
                 <Detail mt="20" mb="10"><b>Email : </b>s.Wichitpong@gmail.com , <b>Tel : </b>064-6099309</Detail>
-                <Detail mb="10"><b>Github</b> : <Link href="https://github.com/Dev-Songkran"><a>https://github.com/dev-songkran</a></Link></Detail>
                 <Detail mb="10"><b>Website</b> : <Link href="https://dev-songkran.github.io"><a>https://dev-songkran.github.io</a></Link></Detail>
+                <Detail>
+                    <Link href="https://facebook.com/k.crono">
+                        <a target="_blank"><Icon color="#3b5998" className="fa fa-facebook"></Icon></a>
+                    </Link>
+                    <Link href="https://twitter.com/@dev_Songkran">
+                        <a target="_blank"><Icon color="#00b2ff" className="fa fa-twitter"></Icon></a>
+                    </Link>
+                    <Link href="https://github.com/dev-songkran">
+                        <a target="_blank"><Icon color="#333333" className="fa fa-github-alt"></Icon></a>
+                    </Link>
+                </Detail>
                 <Box>
                     <h3>EDUCATION AND EXPERIENCE</h3>
                     <Timeline svg="../static/svg/book.svg">

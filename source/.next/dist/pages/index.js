@@ -43,24 +43,24 @@ var _Chart2 = _interopRequireDefault(_Chart);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Container = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-0"
+    componentId: "s1blqoby-0"
 })(["max-width:1200px;width:1200px;margin:0 auto;padding:40px;min-height:500px;background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,0.1);position:relative;"]);
 var Img = _styledComponents2.default.img.withConfig({
-    componentId: "s788ukl-1"
+    componentId: "s1blqoby-1"
 })(["display:block;margin:0 auto;border-radius:100%;"]);
 var Myname = _styledComponents2.default.h3.withConfig({
-    componentId: "s788ukl-2"
+    componentId: "s1blqoby-2"
 })(["margin:10px auto;display:table;font-size:25px;font-weight:400;color:#333;"]);
 var Detail = _styledComponents2.default.p.withConfig({
-    componentId: "s788ukl-3"
+    componentId: "s1blqoby-3"
 })(["font-size:14px;color:#111;display:table;margin:0 auto;font-weight:400;margin-bottom:", "px;margin-top:", "px;a{color:#446594;font-weight:600;}"], function (props) {
     return props.mb ? props.mb : '5';
 }, function (props) {
     return props.mt ? props.mt : '0';
 });
 var Icon = _styledComponents2.default.i.withConfig({
-    componentId: "s788ukl-4"
-})(["padding:10px;width:35px;height:35px;text-align:center;border-radius:100%;border:1px solid ", ";color:", ";transition:all 0.2s;margin:0 5px;&:hover{background:", ";color:#fff;}"], function (props) {
+    componentId: "s1blqoby-4"
+})(["padding:10px;width:35px;height:35px;display:inline-block;text-align:center;border-radius:100%;border:1px solid ", ";color:", ";transition:all 0.2s;margin:0 5px;&:hover{background:", ";color:#fff;}"], function (props) {
     return props.color ? props.color : '#fff';
 }, function (props) {
     return props.color ? props.color : '#fff';
@@ -68,15 +68,15 @@ var Icon = _styledComponents2.default.i.withConfig({
     return props.color ? props.color : '#fff';
 });
 var Box = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-5"
+    componentId: "s1blqoby-5"
 })(["margin-top:30px;margin-bottom:30px;border-top:1px solid #f197a3;>h3{text-align:center;font-weight:500;}"]);
 var Timeline = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-6"
+    componentId: "s1blqoby-6"
 })(["display:flex;position:relative;margin-bottom:15px;&:after,&:before{content:'';position:absolute;left:0;right:0;bottom:0;top:0;margin:auto;}&:after{width:30px;height:30px;display:flex;border-radius:100%;border:2px solid #f197a3;padding:10px;background:#fff;background-image:", ";background-repeat:no-repeat;background-position:center;}&:before{width:2px;background:#f197a3;bottom:auto;height:120%;}"], function (props) {
     return props.svg ? "url(" + props.svg + ")" : "url('')";
 });
 var Text = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-7"
+    componentId: "s1blqoby-7"
 })(["width:50%;display:flex;margin-left:", ";margin-right:", ";h3{margin:0;font-weight:400;color:#333;width:100%;}", "{color:#f197a3;margin:0;width:100%;}"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
@@ -84,27 +84,27 @@ var Text = _styledComponents2.default.div.withConfig({
 }, Detail);
 
 var Year = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-8"
+    componentId: "s1blqoby-8"
 })(["width:50%;margin-left:", ";margin-right:", ";display:flex;padding:0 15px;"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
     return props.right ? 'auto' : '30px';
 });
 var Card = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-9"
+    componentId: "s1blqoby-9"
 })(["padding:15px;", ";", ";&.custom{padding:5px 15px;height:40px;border:2px solid #785892;border-radius:50px;position:relative;margin-top:auto;margin-bottom:auto;color:#785892;}@media (max-width:670px){h3{font-size:14px;}p{font-size:10px;}&.custom{font-size:13px;padding:5px 10px;height:35px;font-weight:400;}}"], function (props) {
     return props.left ? "margin-left: auto; margin-right:0;text-align:right;" : "";
 }, function (props) {
     return props.right ? "margin-right: auto; margin-left:0;text-align:left;" : "";
 });
 var Skill = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-10"
+    componentId: "s1blqoby-10"
 })(["margin:15px;"]);
 var Flex = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-11"
+    componentId: "s1blqoby-11"
 })(["display:flex;align-items:center;justify-content:center"]);
 var Language = _styledComponents2.default.div.withConfig({
-    componentId: "s788ukl-12"
+    componentId: "s1blqoby-12"
 })([""]);
 
 var App = function (_Component) {

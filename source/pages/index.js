@@ -42,6 +42,7 @@ const Icon = styled.i`
     padding: 10px;
     width: 35px;
     height: 35px;
+    display: inline-block;
     text-align: center;
     border-radius: 100%;
     border: 1px solid ${props => props.color ? props.color : '#fff'};

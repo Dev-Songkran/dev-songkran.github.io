@@ -168,6 +168,41 @@ class App extends Component {
     constructor(props) {
       super(props);
       this.state = {isToggleOn: true};
+      this.state = {TH : 
+                        {
+                            name: 'สงกรานต์ วิชิตพงษ์',
+                            introduce: 'เป็น Front-end และ Back-end Developer จากประเทศไทย',
+                            address: { a: 'ที่อยู่' ,b:'263 ซ. 14 รัตนอุทิศ ต.หาดใหญ่ อ.หาดใหญ่ จ.สงขลา 90110 ประเทศไทย' },
+                            email: 'อีเมล',
+                            tel: 'เบอร์โทรฯ',
+                            website : 'เว็บไซต์',
+                            ene : {
+                                    topic : 'การศึกษาและประสบการณ์',
+                                    edu : { bac:'ปริญญาตรีสาขาวิชาวิทยาศาสตร์และเทคโนโลยี',university:'มหาวิทยาลัยหาดใหญ่',province:'สงขลา',year:'2554 - 2558'},
+                                    work : { 
+                                                one : {at: 'รับจ้างอิสระ',position:'รับทำเว็บไซต์, ออกแบบกราฟฟิก',year : 'กค. 2558 - พย. 2558'}, 
+                                                two : {at:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS'}
+                                            }
+                                },
+                        },
+                    EN : 
+                        {
+                            name : 'Songkran Wichitpong',
+                            introduce :"I'm a front-end and back-end developer from Thailand",
+                            address : {a:'address',b:' 263 , 14 Lane , Rattana Uthit Rd., Hatyai Sub-district, Hatyai District, Songkhla, 90110 ,Thailand.'},
+                            email: 'Email',
+                            tel: 'Tel',
+                            website : 'Website',
+                            ene : {
+                                    topic : 'EDUCATION AND EXPERIENCE',
+                                    edu : { bac:'Bachelor of Science & Technology.',university:'Hatyai University',province:'Songkhla',year:'2011 - 2015'},
+                                    work : { 
+                                                one : { at:'Freelance',position:'Front-End Developer, Graphic Designer',year : 'Jul 2015 - Nov 2015'}, 
+                                                two : { at:'Chiangraifocus',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS'}
+                                            }
+                                },
+                        }
+                    };
       this.handleClick = this.handleClick.bind(this);
     }
     handleClick() {
@@ -176,15 +211,16 @@ class App extends Component {
       }));
     }
     render(){
+        const {isToggleOn,TH,EN} = this.state
         return (
             <Container>
-                <Language onClick={this.handleClick}>{this.state.isToggleOn ? 'EN' : 'TH'}</Language>
+                <Language onClick={this.handleClick}>{isToggleOn ? 'TH' : 'EN'}</Language>
                 <Img width="200" height="200" src="../static/media/my.1bda1d7a.jpg"/>
-                <Myname>Songkran Wichitpong</Myname>
-                <Detail>I'm a front-end and back-end developer from Thailand</Detail>
-                <Detail><b>address</b> 263 , 14 Lane , Rattana Uthit Rd., Hatyai Sub-district, Hatyai District, Songkhla, 90110 ,Thailand.</Detail>
-                <Detail mt="20" mb="10"><b>Email : </b>s.Wichitpong@gmail.com , <b>Tel : </b>064-6099309</Detail>
-                <Detail mb="10"><b>Website</b> : <Link href="https://dev-songkran.github.io"><a>https://dev-songkran.github.io</a></Link></Detail>
+                <Myname>{isToggleOn ? TH.name : EN.name}</Myname>
+                <Detail>{isToggleOn ? TH.introduce : EN.introduce}</Detail>
+                <Detail><b>{isToggleOn ? TH.address.a : EN.address.a} : </b>{isToggleOn ? TH.address.b : EN.address.b}</Detail>
+                <Detail mt="20" mb="10"><b>{isToggleOn ? TH.email : EN.email} : </b> s.wichitpong@gmail.com, <b>{isToggleOn ? TH.tel : EN.tel} : </b>064-6099309</Detail>
+                <Detail mb="10"><b>{isToggleOn ? TH.website : EN.website} : </b><Link href="https://dev-songkran.github.io"><a>https://dev-songkran.github.io</a></Link></Detail>
                 <Detail>
                     <Link href="https://facebook.com/k.crono">
                         <a target="_blank"><Icon color="#3b5998" className="fa fa-facebook"></Icon></a>
@@ -197,17 +233,17 @@ class App extends Component {
                     </Link>
                 </Detail>
                 <Box>
-                    <h3>EDUCATION AND EXPERIENCE</h3>
+                    <h3>{isToggleOn ? TH.ene.topic : EN.ene.topic}</h3>
                     <Timeline svg="../static/svg/book.svg">
                         <Text left>
                             <Card left>
-                                <h3>Bachelor of Science</h3>
-                                <Detail>University of Hatyai</Detail>
-                                <Detail>Songkhla</Detail>
+                                <h3>{isToggleOn ? TH.ene.edu.bac : EN.ene.edu.bac}</h3>
+                                <Detail>{isToggleOn ? TH.ene.edu.university : EN.ene.edu.university}</Detail>
+                                <Detail>{isToggleOn ? TH.ene.edu.province : EN.ene.edu.province}</Detail>
                             </Card>
                         </Text>
                         <Year right>
-                            <Card right className="custom"> 2011 - 2015 </Card>
+                            <Card right className="custom"> {isToggleOn ? TH.ene.edu.year : EN.ene.edu.year} </Card>
                         </Year>
                     </Timeline>
                     <Timeline svg="../static/svg/coffe.svg">

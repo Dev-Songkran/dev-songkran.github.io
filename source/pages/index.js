@@ -181,8 +181,8 @@ class App extends Component {
                                     topic : 'การศึกษาและประสบการณ์',
                                     edu : { bac:'ปริญญาตรีสาขาวิชาวิทยาศาสตร์และเทคโนโลยี',university:'มหาวิทยาลัยหาดใหญ่',province:'สงขลา',year:'2554 - 2558'},
                                     work : { 
-                                                one : {at: 'รับจ้างอิสระ',position:'รับทำเว็บไซต์, ออกแบบกราฟฟิก',year : 'กค. 2558 - พย. 2558'}, 
-                                                two : {at:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS'}
+                                                1 : {job: 'รับจ้างอิสระ',position:'รับทำเว็บไซต์, ออกแบบกราฟฟิก',year : 'กค. 2558 - พย. 2558',at:'สงขลา'}, 
+                                                2 : {job:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS',at:'เชียงราย'}
                                             }
                                 },
                         },
@@ -198,8 +198,8 @@ class App extends Component {
                                     topic : 'EDUCATION AND EXPERIENCE',
                                     edu : { bac:'Bachelor of Science & Technology.',university:'Hatyai University',province:'Songkhla',year:'2011 - 2015'},
                                     work : { 
-                                                one : { at:'Freelance',position:'Front-End Developer, Graphic Designer',year : 'Jul 2015 - Nov 2015'}, 
-                                                two : { at:'Chiangraifocus',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS'}
+                                                1 : { job:'Freelance',position:'Front-End Developer, Graphic Designer',year : 'Jul 2015 - Nov 2015',at:'Songkhla'}, 
+                                                2 : { job:'Chiangraifocus',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS',at:'Chiangrai'}
                                             }
                                 },
                         }
@@ -216,7 +216,7 @@ class App extends Component {
         return (
             <Container>
                 <Language onClick={this.handleClick}>{isToggleOn ? 'TH' : 'EN'}</Language>
-                <Img width="200" height="200" src="../static/media/my.1bda1d7a.jpg"/>
+                <Img width="200" height="200" src="../static/media/my.1bda1d7a.jpg?310000"/>
                 <Myname>{isToggleOn ? TH.name : EN.name}</Myname>
                 <Detail>{isToggleOn ? TH.introduce : EN.introduce}</Detail>
                 <Detail><b>{isToggleOn ? TH.address.a : EN.address.a} : </b>{isToggleOn ? TH.address.b : EN.address.b}</Detail>
@@ -249,26 +249,26 @@ class App extends Component {
                     </Timeline>
                     <Timeline svg="../static/svg/coffe.svg">
                         <Year left>
-                            <Card left className="custom"> Jul 2015 - Nov 2015</Card>
+                            <Card left className="custom"> {isToggleOn ? TH.ene.work[1].year : EN.ene.work[1].year }</Card>
                         </Year>
                         <Text right>
                             <Card right>
-                                <h3>Freelance</h3>
-                                <Detail>Front-End Developer, Graphic Designer</Detail>
-                                <Detail>Hatyai</Detail>
+                                <h3>{isToggleOn ? TH.ene.work[1].job : EN.ene.work[1].job}</h3>
+                                <Detail>{isToggleOn ? TH.ene.work[1].position : EN.ene.work[1].position}</Detail>
+                                <Detail>{isToggleOn ? TH.ene.work[1].at : EN.ene.work[1].at}</Detail>
                             </Card>
                         </Text>
                     </Timeline>
                     <Timeline svg="../static/svg/coffe.svg">
                         <Text left>
                             <Card left>
-                                <h3>Chiangrai Focus</h3>
-                                <Detail>Front-End & Back-End Developer.</Detail>
-                                <Detail>Chiangrai</Detail>
+                                <h3>{isToggleOn ? TH.ene.work[2].job : EN.ene.work[2].job}</h3>
+                                <Detail>{isToggleOn ? TH.ene.work[2].position : EN.ene.work[2].position}</Detail>
+                                <Detail>{isToggleOn ? TH.ene.work[2].at : EN.ene.work[2].at}</Detail>
                             </Card>
                         </Text>
                         <Year right>
-                            <Card right className="custom"> MAY 2016 - IN PROGRESS</Card>
+                            <Card right className="custom"> {isToggleOn ? TH.ene.work[2].year : EN.ene.work[2].year }</Card>
                         </Year>
                     </Timeline>
                 </Box>

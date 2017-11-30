@@ -43,23 +43,23 @@ var _Chart2 = _interopRequireDefault(_Chart);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Container = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-0"
+    componentId: "s1dfhqnu-0"
 })(["max-width:1200px;width:1200px;margin:0 auto;padding:40px;min-height:500px;background:#fff;border-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,0.1);position:relative;"]);
 var Img = _styledComponents2.default.img.withConfig({
-    componentId: "s6in7b8-1"
+    componentId: "s1dfhqnu-1"
 })(["display:block;margin:0 auto;border-radius:100%;"]);
 var Myname = _styledComponents2.default.h3.withConfig({
-    componentId: "s6in7b8-2"
+    componentId: "s1dfhqnu-2"
 })(["margin:10px auto;display:table;font-size:25px;font-weight:400;color:#333;"]);
 var Detail = _styledComponents2.default.p.withConfig({
-    componentId: "s6in7b8-3"
+    componentId: "s1dfhqnu-3"
 })(["font-size:14px;color:#111;display:table;margin:0 auto;font-weight:400;margin-bottom:", "px;margin-top:", "px;a{color:#446594;font-weight:600;}"], function (props) {
     return props.mb ? props.mb : '5';
 }, function (props) {
     return props.mt ? props.mt : '0';
 });
 var Icon = _styledComponents2.default.i.withConfig({
-    componentId: "s6in7b8-4"
+    componentId: "s1dfhqnu-4"
 })(["padding:10px;width:35px;height:35px;display:inline-block;text-align:center;border-radius:100%;border:1px solid ", ";color:", ";transition:all 0.2s;margin:0 5px;&:hover{background:", ";color:#fff;}"], function (props) {
     return props.color ? props.color : '#fff';
 }, function (props) {
@@ -68,15 +68,15 @@ var Icon = _styledComponents2.default.i.withConfig({
     return props.color ? props.color : '#fff';
 });
 var Box = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-5"
+    componentId: "s1dfhqnu-5"
 })(["margin-top:30px;margin-bottom:30px;border-top:1px solid #f197a3;>h3{text-align:center;font-weight:500;}"]);
 var Timeline = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-6"
+    componentId: "s1dfhqnu-6"
 })(["display:flex;position:relative;margin-bottom:15px;&:after,&:before{content:'';position:absolute;left:0;right:0;bottom:0;top:0;margin:auto;}&:after{width:30px;height:30px;display:flex;border-radius:100%;border:2px solid #f197a3;padding:10px;background:#fff;background-image:", ";background-repeat:no-repeat;background-position:center;}&:before{width:2px;background:#f197a3;bottom:auto;height:120%;}"], function (props) {
     return props.svg ? "url(" + props.svg + ")" : "url('')";
 });
 var Text = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-7"
+    componentId: "s1dfhqnu-7"
 })(["width:50%;display:flex;margin-left:", ";margin-right:", ";h3{margin:0;font-weight:400;color:#333;width:100%;}", "{color:#f197a3;margin:0;width:100%;}"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
@@ -84,28 +84,28 @@ var Text = _styledComponents2.default.div.withConfig({
 }, Detail);
 
 var Year = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-8"
+    componentId: "s1dfhqnu-8"
 })(["width:50%;margin-left:", ";margin-right:", ";display:flex;padding:0 15px;"], function (props) {
     return props.left ? 'auto' : '30px';
 }, function (props) {
     return props.right ? 'auto' : '30px';
 });
 var Card = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-9"
+    componentId: "s1dfhqnu-9"
 })(["padding:15px;", ";", ";&.custom{padding:5px 15px;height:40px;border:2px solid #785892;border-radius:50px;position:relative;margin-top:auto;margin-bottom:auto;color:#785892;}@media (max-width:670px){h3{font-size:14px;}p{font-size:10px;}&.custom{font-size:13px;padding:5px 10px;height:35px;font-weight:400;}}"], function (props) {
     return props.left ? "margin-left: auto; margin-right:0;text-align:right;" : "";
 }, function (props) {
     return props.right ? "margin-right: auto; margin-left:0;text-align:left;" : "";
 });
 var Skill = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-10"
+    componentId: "s1dfhqnu-10"
 })(["margin:15px;"]);
 var Flex = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-11"
+    componentId: "s1dfhqnu-11"
 })(["display:flex;align-items:center;justify-content:center"]);
 var Language = _styledComponents2.default.div.withConfig({
-    componentId: "s6in7b8-12"
-})([""]);
+    componentId: "s1dfhqnu-12"
+})(["position:fixed;right:20px;padding:10px;border:1px solid #f197a3;border-radius:100%;background:#fff;height:40px;width:40px;line-height:18px;transition:all 0.2s;cursor:pointer;box-shadow:1px 1px 2px rgba(0,0,0,0.2);z-index:999999999;&:hover{background:#f197a3;color:#fff;}"]);
 
 var App = function (_Component) {
     (0, _inherits3.default)(App, _Component);
@@ -128,7 +128,7 @@ var App = function (_Component) {
                     edu: { bac: 'ปริญญาตรีสาขาวิชาวิทยาศาสตร์และเทคโนโลยี', university: 'มหาวิทยาลัยหาดใหญ่', province: 'สงขลา', year: '2554 - 2558' },
                     work: {
                         1: { job: 'รับจ้างอิสระ', position: 'รับทำเว็บไซต์, ออกแบบกราฟฟิก', year: 'กค. 2558 - พย. 2558', at: 'สงขลา' },
-                        2: { job: 'เชียงรายโฟกัส', position: 'Front-End & Back-End Developer.', year: 'May 2016 - IN PROGRESS', at: 'เชียงราย' }
+                        2: { job: 'เชียงรายโฟกัส', position: 'Front-End & Back-End Developer.', year: 'พค. 2016 - IN PROGRESS', at: 'เชียงราย' }
                     }
                 }
             },

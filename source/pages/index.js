@@ -49,6 +49,7 @@ const Icon = styled.i`
     color: ${props => props.color ? props.color : '#fff'};
     transition: all 0.2s;
     margin: 0 5px;
+    
     &:hover{
         background: ${props => props.color ? props.color : '#fff'};
         color: #fff;
@@ -163,7 +164,23 @@ const Flex = styled.div`
     justify-content: center
 `
 const Language = styled.div`
-    
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid #f197a3;
+    border-radius: 100%;
+    background:#fff;
+    height: 40px;
+    width: 40px;
+    line-height: 18px;
+    transition: all 0.2s;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    z-index: 999999999;
+    &:hover{
+        background: #f197a3;
+        color: #fff;
+    }
 `
 class App extends Component {
     constructor(props) {
@@ -182,7 +199,7 @@ class App extends Component {
                                     edu : { bac:'ปริญญาตรีสาขาวิชาวิทยาศาสตร์และเทคโนโลยี',university:'มหาวิทยาลัยหาดใหญ่',province:'สงขลา',year:'2554 - 2558'},
                                     work : { 
                                                 1 : {job: 'รับจ้างอิสระ',position:'รับทำเว็บไซต์, ออกแบบกราฟฟิก',year : 'กค. 2558 - พย. 2558',at:'สงขลา'}, 
-                                                2 : {job:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS',at:'เชียงราย'}
+                                                2 : {job:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'พค. 2016 - IN PROGRESS',at:'เชียงราย'}
                                             }
                                 },
                         },

@@ -3,7 +3,9 @@ import React , { Component } from 'react'
 
 const ChartCircle = styled.div`
 justify-content: space-around;
-width: 230px;
+max-width: 230px;
+width: 100%;
+min-width: 150px;
 margin: auto;
 .circular-chart {
     display: block;
@@ -21,8 +23,8 @@ margin: auto;
     }
     .percentage {
         fill: #785892;
-        font-family: sans-serif;
-        font-size: 0.4em;
+        font-family: athiti,"sans-serif";
+        font-size: 0.5em;
         text-anchor: middle;
     }
 }
@@ -31,9 +33,9 @@ margin: auto;
 }
 .skill{
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    color: #d8838e;
+    font-size: 1em;
+    font-weight: 400;
+    color: #785892;
 }
 @keyframes progress {
     0% { stroke-dasharray: 0 100;}
@@ -42,6 +44,7 @@ margin: auto;
 class Chart extends Component {
     render(){
         const { percent, skillName } = this.props
+        let color = null
         return (
             <ChartCircle>
                 <svg viewBox="0 0 36 36" className="circular-chart color">
@@ -50,7 +53,7 @@ class Chart extends Component {
                 <path className="circle"
                     strokeDasharray={`${percent},100`}
                     d="M18 2.0845 a -15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                <text x="18" y="20.35" className="percentage">{percent}%</text>
+                <text x="18" y="20.35" className={`percentage ${color}`} >{percent}%</text>
                 </svg>
                 <div className="skill">{skillName}</div>
             </ChartCircle>

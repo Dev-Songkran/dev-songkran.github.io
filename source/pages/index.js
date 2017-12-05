@@ -2,6 +2,7 @@ import React , { Component } from 'react'
 import styled from "styled-components"
 import Link from "next/link"
 import Chart from "../components/Chart"
+import Portfolio from "../components/portfolio"
 const Container = styled.div`
     max-width: 1200px;
     width: 1200px;
@@ -189,6 +190,10 @@ class App extends Component {
       this.state = {TH : 
                         {
                             name: 'สงกรานต์ วิชิตพงษ์',
+                            date_of_birth : { topic: 'วันเกิด : ', date:'13 เมษายน 2534'},
+                            age : {topic:'อายุ : ',year: 'ปี'},
+                            personality : {topic:'บุคลิกภาพ : ',detail:'ชอบเรียนรู้สิ่งใหม่ ๆ , มีความรับผิดชอบ , เป็นกันเอง'},
+                            hw : '176 ซม. / 75 กิโลกรัม',
                             introduce: 'เป็น Front-end และ Back-end Developer จากประเทศไทย',
                             address: { a: 'ที่อยู่' ,b:'263 ซ. 14 รัตนอุทิศ ต.หาดใหญ่ อ.หาดใหญ่ จ.สงขลา 90110 ประเทศไทย' },
                             email: 'อีเมล',
@@ -199,15 +204,20 @@ class App extends Component {
                                     edu : { bac:'ปริญญาตรีสาขาวิชาวิทยาศาสตร์และเทคโนโลยี',university:'มหาวิทยาลัยหาดใหญ่',province:'สงขลา',year:'2554 - 2558'},
                                     work : { 
                                                 1 : {job: 'รับจ้างอิสระ',position:'รับทำเว็บไซต์, ออกแบบกราฟฟิก',year : 'กค. 2558 - พย. 2558',at:'สงขลา'}, 
-                                                2 : {job:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'พค. 2016 - IN PROGRESS',at:'เชียงราย'}
+                                                2 : {job:'เชียงรายโฟกัส',position:'Front-End & Back-End Developer.',year : 'พค. 2559 - ปัจจุบัน',at:'เชียงราย'}
                                             }
                                 },
+                            skill : 'ความสามารถ',
                         },
                     EN : 
                         {
                             name : 'Songkran Wichitpong',
+                            date_of_birth : { topic: 'Date of Birth : ', date:'13 April 1991'},
+                            age : {topic: 'Age : ',year :'years old'},
+                            personality: {topic: 'Personality : ' , detail:'like to learn new things, Responsible , Friendly'},
+                            hw : '176cm / 75kgs.',
                             introduce :"I'm a front-end and back-end developer from Thailand",
-                            address : {a:'address',b:' 263 , 14 Lane , Rattana Uthit Rd., Hatyai Sub-district, Hatyai District, Songkhla, 90110 ,Thailand.'},
+                            address : {a:'Address',b:' 263 , 14 Lane , Rattana Uthit Rd., Hatyai Sub-district, Hatyai District, Songkhla, 90110 ,Thailand.'},
                             email: 'Email',
                             tel: 'Tel',
                             website : 'Website',
@@ -219,6 +229,7 @@ class App extends Component {
                                                 2 : { job:'Chiangraifocus',position:'Front-End & Back-End Developer.',year : 'May 2016 - IN PROGRESS',at:'Chiangrai'}
                                             }
                                 },
+                            skill : 'SKILLS',
                         }
                     };
       this.handleClick = this.handleClick.bind(this);
@@ -230,12 +241,16 @@ class App extends Component {
     }
     render(){
         const {isToggleOn,TH,EN} = this.state
+        const date = new Date();
+        const year = date.getFullYear();
         return (
             <Container>
                 <Language onClick={this.handleClick}>{isToggleOn ? 'TH' : 'EN'}</Language>
                 <Img width="200" height="200" src="../static/media/my.1bda1d7a.jpg?310000"/>
                 <Myname>{isToggleOn ? TH.name : EN.name}</Myname>
                 <Detail>{isToggleOn ? TH.introduce : EN.introduce}</Detail>
+                <Detail><b>{isToggleOn ? TH.date_of_birth.topic : EN.date_of_birth.topic}</b> {isToggleOn ? TH.date_of_birth.date : EN.date_of_birth.date} , <b>{isToggleOn ? TH.age.topic : EN.age.topic}</b> {`${year-1991} ${isToggleOn ? TH.age.year : EN.age.year}`} </Detail>
+                <Detail><b>{isToggleOn ? TH.personality.topic : EN.personality.topic}</b> {isToggleOn ? TH.personality.detail : EN.personality.detail}</Detail>
                 <Detail><b>{isToggleOn ? TH.address.a : EN.address.a} : </b>{isToggleOn ? TH.address.b : EN.address.b}</Detail>
                 <Detail mt="20" mb="10"><b>{isToggleOn ? TH.email : EN.email} : </b> s.wichitpong@gmail.com, <b>{isToggleOn ? TH.tel : EN.tel} : </b>064-6099309</Detail>
                 <Detail mb="10"><b>{isToggleOn ? TH.website : EN.website} : </b><Link href="https://dev-songkran.github.io"><a>https://dev-songkran.github.io</a></Link></Detail>
@@ -290,7 +305,7 @@ class App extends Component {
                     </Timeline>
                 </Box>
                 <Box style={{marginTop: '50px' }}>
-                    <h3>SKILLS</h3>
+                    <h3>{isToggleOn ? TH.skill : EN.skill}</h3>
                     <Flex style={{marginBottom:'30px'}}>
                         <Chart percent="96" skillName="HTML5 / CSS3"></Chart>
                         <Chart percent="89" skillName="PHP"></Chart>
@@ -298,6 +313,7 @@ class App extends Component {
                     </Flex>
                     <Flex>
                         <Chart percent="85" skillName="javascript / jQuery"></Chart>
+                        <Chart percent="60" skillName="Google API"></Chart>
                         <Chart percent="40" skillName="React.js / Next.js"></Chart>
                     </Flex>
                 </Box>

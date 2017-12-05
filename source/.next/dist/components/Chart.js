@@ -34,9 +34,12 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'D:\\github\\dev-songkran.github.io\\source\\components\\Chart.js';
+
+
 var ChartCircle = _styledComponents2.default.div.withConfig({
-    componentId: 's1yjoa9s-0'
-})(['justify-content:space-around;width:230px;margin:auto;.circular-chart{display:block;margin:10px auto;.circle-bg{fill:none;stroke:#eee;stroke-width:2;}.circle{fill:none;stroke-width:2;stroke-linecap:round;animation:progress 1s ease-out backwards;}.percentage{fill:#785892;font-family:sans-serif;font-size:0.4em;text-anchor:middle;}}.circular-chart.color .circle{stroke:#f197a3;}.skill{text-align:center;font-size:20px;font-weight:600;color:#d8838e;}@keyframes progress{0%{stroke-dasharray:0 100;}}']);
+    componentId: 'nsg5vf-0'
+})(['justify-content:space-around;max-width:230px;width:100%;min-width:150px;margin:auto;.circular-chart{display:block;margin:10px auto;.circle-bg{fill:none;stroke:#eee;stroke-width:2;}.circle{fill:none;stroke-width:2;stroke-linecap:round;animation:progress 1s ease-out backwards;}.percentage{fill:#785892;font-family:athiti,"sans-serif";font-size:0.5em;text-anchor:middle;}}.circular-chart.color .circle{stroke:#f197a3;}.skill{text-align:center;font-size:1em;font-weight:400;color:#785892;}@keyframes progress{0%{stroke-dasharray:0 100;}}']);
 
 var Chart = function (_Component) {
     (0, _inherits3.default)(Chart, _Component);
@@ -54,10 +57,36 @@ var Chart = function (_Component) {
                 percent = _props.percent,
                 skillName = _props.skillName;
 
-            return _react2.default.createElement(ChartCircle, null, _react2.default.createElement('svg', { viewBox: '0 0 36 36', className: 'circular-chart color' }, _react2.default.createElement('path', { className: 'circle-bg',
-                d: 'M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831' }), _react2.default.createElement('path', { className: 'circle',
+            var color = null;
+            return _react2.default.createElement(ChartCircle, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                }
+            }, _react2.default.createElement('svg', { viewBox: '0 0 36 36', className: 'circular-chart color', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 50
+                }
+            }, _react2.default.createElement('path', { className: 'circle-bg',
+                d: 'M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 51
+                }
+            }), _react2.default.createElement('path', { className: 'circle',
                 strokeDasharray: percent + ',100',
-                d: 'M18 2.0845 a -15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831' }), _react2.default.createElement('text', { x: '18', y: '20.35', className: 'percentage' }, percent, '%')), _react2.default.createElement('div', { className: 'skill' }, skillName));
+                d: 'M18 2.0845 a -15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 53
+                }
+            }), _react2.default.createElement('text', { x: '18', y: '20.35', className: 'percentage ' + color, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 56
+                }
+            }, percent, '%')), _react2.default.createElement('div', { className: 'skill', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 58
+                }
+            }, skillName));
         }
     }]);
 
@@ -65,3 +94,4 @@ var Chart = function (_Component) {
 }(_react.Component);
 
 exports.default = Chart;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXENoYXJ0LmpzIl0sIm5hbWVzIjpbInN0eWxlZCIsIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2hhcnRDaXJjbGUiLCJkaXYiLCJDaGFydCIsInByb3BzIiwicGVyY2VudCIsInNraWxsTmFtZSIsImNvbG9yIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPLEFBQVU7Ozs7Ozs7OztBQUVqQixJQUFNLHlDQUFBLEFBQXFCO2lCQUFyQjtBQUFBLENBQWMsR0FBcEI7O0ksQUF3Q007Ozs7Ozs7Ozs7O2lDQUNNO3lCQUMyQixLQUQzQixBQUNnQztnQkFEaEMsQUFDSSxpQkFESixBQUNJO2dCQURKLEFBQ2EsbUJBRGIsQUFDYSxBQUNqQjs7Z0JBQUksUUFBSixBQUFZLEFBQ1o7bUNBQ0ssY0FBRDs7OEJBQUE7Z0NBQUEsQUFDSTtBQURKO0FBQUEsYUFBQSxrQkFDSSxjQUFBLFNBQUssU0FBTCxBQUFhLGFBQVksV0FBekIsQUFBbUM7OEJBQW5DO2dDQUFBLEFBQ0E7QUFEQTt1REFDTSxXQUFOLEFBQWdCLEFBQ1o7bUJBREosQUFDTTs4QkFETjtnQ0FEQSxBQUNBLEFBRUE7QUFGQTt3REFFTSxXQUFOLEFBQWdCLEFBQ1o7aUNBQUEsQUFBb0IsVUFEeEIsQUFFSTttQkFGSixBQUVNOzhCQUZOO2dDQUhBLEFBR0EsQUFHQTtBQUhBO2dDQUdBLGNBQUEsVUFBTSxHQUFOLEFBQVEsTUFBSyxHQUFiLEFBQWUsU0FBUSwyQkFBdkIsQUFBZ0Q7OEJBQWhEO2dDQUFBLEFBQTJEO0FBQTNEO2VBQUEsU0FQSixBQUNJLEFBTUEsQUFFQSx1QkFBQSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQXdCO0FBQXhCO2VBVlIsQUFDSSxBQVNJLEFBR1g7Ozs7O0FBakJlLEEsQUFtQnBCOztrQkFBQSxBQUFlIiwiZmlsZSI6IkNoYXJ0LmpzIiwic291cmNlUm9vdCI6IkQ6L2dpdGh1Yi9kZXYtc29uZ2tyYW4uZ2l0aHViLmlvL3NvdXJjZSJ9

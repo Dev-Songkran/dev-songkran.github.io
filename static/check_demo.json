@@ -1,4 +1,6 @@
 {
   "status" : true,
-  "ele" : '<div>test</div>'
+  "properties" : {
+    "ele" : "<div class=\"bg-danger\"><div class=\"container\"><h2 style=\"font-family: Sarabun\">เว็บไซต์นี้อยู่ในเวอร์ชั่น Demo</h2></div></div>"
+  }
 }
